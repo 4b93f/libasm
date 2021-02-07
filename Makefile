@@ -6,11 +6,11 @@
 #    By: chly-huc <chly-huc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/11 16:28:13 by chly-huc          #+#    #+#              #
-#    Updated: 2020/12/12 17:16:06 by chly-huc         ###   ########.fr        #
+#    Updated: 2021/02/07 03:00:12 by chly-huc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS   = ft_strcmp.s
+SRCS   = ft_strcpy.s
 HEADERS =	libasm.h
 NAME = 		libasm.a
 OBJS = 		${SRCS:.s=.o}
