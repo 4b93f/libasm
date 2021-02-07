@@ -2,7 +2,8 @@ global _ft_strcmp
 
 section .text
 
-_ft_strcmp:	mov rax, 0
+_ft_strcmp:	
+			mov rax, 0
 			jmp _loop
 
 _loop:

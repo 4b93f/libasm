@@ -2,21 +2,18 @@
 
 				section .text
 _ft_strcpy:
+			mov		rax, 0
+			mov		rcx, 0
 			jmp _loop
 			
 _loop:
-				cmp rsi, 0
-				je _exit
-				cmp rdi, 0
-				je _exit
-				mov cl, BYTE [rsi]
-				cmp cl, 0
-
-				je _exit
-				mov BYTE [rdi], cl
-				inc rdi
-				inc rsi
-				jmp _loop
+			cmp		BYTE[rsi + rcx], 0
+			je		_exit
+			mov		dl, BYTE[rsi + rcx]
+			mov		BYTE[rdi + rcx], dl
+			inc rcx
+			jmp		_loop
 _exit:
-	mov rax, rdi
-	ret
+	mov		BYTE[rdi + rcx], 0
+	mov		rax, rdi
+			ret
