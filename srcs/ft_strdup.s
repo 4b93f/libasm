@@ -2,7 +2,6 @@
 				extern ft_strlen
 				extern ft_strcpy
 				extern malloc
-				extern __errno_location	
 
 ft_strdup:
 		xor rcx, rcx	
@@ -20,7 +19,6 @@ loop:
 		call ft_strcpy
 
 exit:
-		call __errno_location WRT ..plt
 		mov rax, rdi
 		ret
  

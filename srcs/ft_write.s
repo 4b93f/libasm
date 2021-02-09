@@ -9,6 +9,7 @@ ft_write:
 			ret
 
 exit:
+			neg rax
 			push rax
 			pop rdx
 			call __errno_location WRT ..plt

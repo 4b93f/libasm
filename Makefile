@@ -6,11 +6,11 @@
 #    By: chly-huc <chly-huc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/11 16:28:13 by chly-huc          #+#    #+#              #
-#    Updated: 2021/02/07 15:59:17 by chly-huc         ###   ########.fr        #
+#    Updated: 2021/02/09 19:42:06 by chly-huc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS   = 	ft_strdup.s ft_strlen.s ft_strcpy.s ft_write.s ft_read.s ft_strcmp.s \
+SRCS   = 	srcs/ft_strdup.s srcs/ft_strlen.s srcs/ft_strcpy.s srcs/ft_write.s srcs/ft_read.s srcs/ft_strcmp.s \
 
 			
 HEADERS =	libasm.h

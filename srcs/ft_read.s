@@ -9,6 +9,7 @@ ft_read:
 			ret
 
 error:
+			neg rax
 			push rax
 			pop rdx
 			call __errno_location WRT ..plt
