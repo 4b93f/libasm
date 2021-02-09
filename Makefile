@@ -20,7 +20,7 @@ CC = cc -c
 
 
 %.o : %.s
-		@nasm -f macho64 $< -o $@
+		@nasm -f elf64 $< -o $@
 
 ${NAME}: 	${OBJS}
 			@ar rcs ${NAME} ${OBJS}

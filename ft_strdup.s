@@ -1,26 +1,26 @@
-				global _ft_strdup
-				extern _ft_strlen
-				extern _ft_strcpy
-				extern _malloc		
-				section .text
+				global ft_strdup
+				extern ft_strlen
+				extern ft_strcpy
+				extern malloc
+				extern __errno_location	
 
-_ft_strdup:
+ft_strdup:
 		xor rcx, rcx	
 
-_loop:
-		cmp rdi, 0
-		je _exit
-		call _ft_strlen
+loop:
+		call ft_strlen
 		mov rcx, rax
  		push rdi
 		mov rdi, rcx
-		call _malloc
+		call malloc
 		cmp rax, 0
-		je _exit
+		je exit
 		mov rdi, rax
 		pop rsi
-		call _ft_strcpy
+		call ft_strcpy
 
-_exit:
+exit:
+		call __errno_location WRT ..plt
+		mov rax, rdi
 		ret
  

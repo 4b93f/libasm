@@ -16,6 +16,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <errno.h>
+#include <string.h>
 
 int ft_write(int c , char *str, int e);
 int ft_read(unsigned int fd, const char *str, size_t e);
@@ -29,11 +30,22 @@ int main()
 	char *s1 = "YOLo";
 	char *s2;
 	int fd;
-	char *buf;
-
-	fd = open("ok", O_RDONLY);
-	printf("%d\n", ft_read(fd, buf, 5));
-	printf("%s\n", buf);
-	//printf("%d\n", ft_strcmp("oui", "OUI"));
-	//printf("{%s}\n", ft_strdup(s1));
+	char buf[10];
+	//fd = open("OK", O_RDONLY);
+	//printf("%d\n", ft_read(fd, buf, 5));
+	//printf("%s\n", buf);
+	//printf("%d\n", read(fd, buf, 5));
+	//printf("%s\n", buf);
+	//printf("%s\n", strcpy(s2, s1));
+	//printf("%s\n", s2);
+	//printf("%s\n", ft_strcpy(s2, s1));
+	//printf("%s\n",s2);
+	//printf("%d\n", ft_strlen(NULL));
+	//printf("%d\n", strlen(NULL));
+	//ft_write(0, "OUI", 4);
+	//write(0, "OUI", 4);
+	printf("%d\n", ft_strcmp("zui", "aUI"));
+	//s2 = ft_strdup(NULL);
+	//s2 = strdup(NULL);
+	//printf("%s\n", s2);
 }

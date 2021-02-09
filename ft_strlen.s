@@ -1,19 +1,16 @@
-section .text
-	global _ft_strlen
+			global ft_strlen
 
-_ft_strlen:
+ft_strlen:
 			xor rax, rax
-			cmp rdi, 0
-			je _exit
-			jmp _loop
+			jmp loop
 
-_loop:
+loop:
 			cmp BYTE [rdi +rax], 0
-			je _exit
+			je exit
 			inc rax
-			jmp _loop
+			jmp loop
 			ret 
 
-_exit:
-		ret
+exit:
+			ret
 		

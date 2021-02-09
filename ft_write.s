@@ -1,6 +1,17 @@
-				global _ft_write
+			global ft_write
+			extern __errno_location
 
-				section .text
-_ft_write:		mov rax, 0x2000004 ; sys_write system call
-				syscall
-				ret
+ft_write:		
+			mov rax, 1
+			syscall
+			cmp rax, 0
+			jl exit
+			ret
+
+exit:
+			push rax
+			pop rdx
+			call __errno_location WRT ..plt
+			mov [rax], rdx
+			mov rax, -1
+			ret
