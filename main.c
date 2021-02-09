@@ -44,7 +44,7 @@ int main()
 	//printf("%d\n", strlen(NULL));
 	//ft_write(0, "OUI", 4);
 	//write(0, "OUI", 4);
-	printf("%d\n", ft_strcmp("zui", "aUI"));
+	//printf("%d\n", ft_strcmp("zui", "aUI"));
 	//s2 = ft_strdup(NULL);
 	//s2 = strdup(NULL);
 	//printf("%s\n", s2);
