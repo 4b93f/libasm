@@ -13,7 +13,7 @@ loop:
 		mov rdi, rcx
 		call malloc
 		cmp rax, 0
-		je error
+		jz error
 		mov rdi, rax
 		pop rsi
 		call ft_strcpy
