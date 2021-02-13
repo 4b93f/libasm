@@ -17,18 +17,23 @@ loop:
 			inc rsi				
 			jmp ft_strcmp	
 neg:
-			mov rax, 1
-			ret
-
-pos:
 			mov rax, -1
 			ret
 
+pos:
+			mov rax, 1
+			ret
+
+zero:
+			mov rax, 0
+			ret
 exit:
 			movzx rax, al
 			movzx rbx, bl
 			sub rax, rbx
+			cmp rax, 0
+			jz zero
+			cmp rax, 1
+			jnle pos
 			cmp rax, -1
-			jnge pos
-			jmp neg
-			ret
+			jnge neg

@@ -13,12 +13,16 @@ loop:
 		mov rdi, rcx
 		call malloc
 		cmp rax, 0
-		je exit
+		je error
 		mov rdi, rax
 		pop rsi
 		call ft_strcpy
 
 exit:
 		mov rax, rdi
+		ret
+
+error:
+		mov rax, 0
 		ret
  
